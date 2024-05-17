@@ -1,32 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
     <title>Contact</title>
-</head>
-<body>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
     <header class="flex justify-between items-center border-b-2 bg-[#5C443E]">
+      <div class="ml-3">
+        <img
+          class="w-[5rem] h-auto"
+          src="../../assets/images/logo.png"
+          alt="logo"
+        />
+      </div>
 
-        <div class="ml-3">
-          <img
-          class="w-[5rem] h-auto" 
-          src="../../assets/images/logo.png" alt="logo" />
+      <p class="text-2xl font-bold text-[#DB4827]">
+        <a href=".">Wanderlust</a>
+      </p>
+
+      <div class="flex gap-5 mr-5">
+        <a
+          class="hover:scale-110 text-[#DB4827] font-semibold transition-colors"
+          href="./contact.html"
+          >Contact</a
+        >
+        <a
+          class="hover:scale-110 text-[#DB4827] font-semibold transition-colors"
+          href="./register.html"
+          >Register</a
+        >
+      </div>
+    </header>
+
+    <main class="h-[100%]">
+      <div class="flex flex-col items-center max-w-xl gap-3 p-3 m-auto mt-10">
+        <h1 class="text-4xl font-bold">Get in touch with our support team</h1>
+        <p class="text-sm text-gray-500">
+          Our business hours are 9AM-6PM MST Monday-Friday and 9AM-5PM MST on
+          weekends
+        </p>
+      </div>
+
+      <section class="flex mt-10 justify-evenly">
+        <div
+          class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
+        >
+          <div class="flex flex-col items-center gap-3">
+            <p class="text-xl font-bold">Chat with us</p>
+            <p class="text-sm">Our Support team is a click away!</p>
+          </div>
+          <a href="./contact/chat.html" class="font-semibold text-indigo-900"
+            >Chat Now
+            <ion-icon name="arrow-forward-outline" size="small"></ion-icon
+          ></a>
         </div>
-  
-        <p class="text-2xl font-bold text-[#DB4827]"><a href=".">Wanderlust</a></p>
-  
-        <div class="mr-5 flex gap-5">
-            <a class="hover:text-red-500 text-[#DB4827] font-semibold transition-colors" href="./contact.html">Contact</a>
-            <a class="hover:text-red-500 text-[#DB4827] font-semibold transition-colors" href="./register.html">Register</a>
+
+        <div
+          class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
+        >
+          <div class="flex flex-col items-center gap-3">
+            <p class="text-xl font-bold">Email support</p>
+            <p class="text-sm">
+              Prefer to email? Send us an email and we'll get back to you soon.
+            </p>
+          </div>
+          <a href="" class="font-semibold text-indigo-900"
+            >Send Email
+            <ion-icon name="arrow-forward-outline" size="small"></ion-icon
+          ></a>
         </div>
-  
-      </header>
 
+        <div
+          class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
+        >
+          <div class="flex flex-col items-center gap-3">
+            <p class="text-xl font-bold">Help Center</p>
+            <p class="text-sm">
+              Our self-serve help center is open 24/7 with 150+ articles to help
+            </p>
+          </div>
+          <a href="" class="font-semibold text-indigo-900"
+            >Visit Help Center<ion-icon
+              name="arrow-forward-outline"
+              size="small"
+            ></ion-icon
+          ></a>
+        </div>
+      </section>
 
-      <main>
-        
-      </main>
-</body>
+      <section class="my-10">
+        <div class="flex flex-col items-center justify-center gap-2 mt-20">
+          <p class="text-sm font-light">Our Support Team</p>
+          <p class="text-3xl font-bold">Talk to real people</p>
+          <p class="text-gray-500">
+            Amazing customer support is the #1 reason why customers choose
+            Wanderlust. Our support team knows that on-demand support is
+            crucial, especially on new and unknown lands
+          </p>
+        </div>
+        <!-- Div for the team members -->
+          <div
+            class="grid grid-cols-3 gap-5 my-10 mx-28"
+          >
+            <div class="flex flex-col items-center justify-center max-w-sm">
+              <img
+                class="w-[5rem] h-[5rem] object-cover rounded-full"
+                src="../../assets/images/contact/woman1.jpg"
+                alt="Headshot Woman"
+              />
+              <div class="flex flex-col items-center gap-2">
+                <p class="text-gray-500">Ontario, Canada</p>
+                <p class="text-xl font-bold">Maria Cunnings</p>
+                <p>
+                  She can juggle flaming torches while solving customer issues.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center max-w-sm">
+              <img
+                class="w-[5rem] h-[5rem] object-cover rounded-full"
+                src="../../assets/images/contact/man1.jpg"
+                alt="Headshot Woman"
+              />
+              <div class="flex flex-col items-center gap-2">
+                <p class="text-gray-500">New York, US</p>
+                <p class="text-xl font-bold">Blake Edwards</p>
+                <p>He can solve a Rubik's cube in under 30 seconds.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center max-w-sm">
+              <img
+                class="w-[5rem] h-[5rem] object-cover rounded-full"
+                src="../../assets/images/contact/woman2.jpg"
+                alt="Headshot Woman"
+              />
+              <div class="flex flex-col items-center gap-2">
+                <p class="text-gray-500">Chihuahua, Mexico</p>
+                <p class="text-xl font-bold">Rosa De Leon</p>
+                <p>She can speak five different languages simultaneously.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center max-w-sm">
+              <img
+                class="w-[5rem] h-[5rem] object-cover rounded-full"
+                src="../../assets/images/contact/woman3.jpg"
+                alt="Headshot Woman"
+              />
+              <div class="flex flex-col items-center gap-2">
+                <p class="text-gray-500">Cairo, Egypt</p>
+                <p class="text-xl font-bold">Fatema Al Saed</p>
+                <p>She can solve a Rubik's cube with her feet.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center max-w-sm">
+              <img
+                class="w-[5rem] h-[5rem] object-cover rounded-full"
+                src="../../assets/images/contact/man2.jpg"
+                alt="Headshot Woman"
+              />
+              <div class="flex flex-col items-center gap-2">
+                <p class="text-gray-500">Cologne, Germany</p>
+                <p class="text-xl font-bold">Herman Gioff</p>
+                <p>He can code with his eyes closed.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center max-w-sm">
+              <img
+                class="w-[5rem] h-[5rem] object-cover rounded-full"
+                src="../../assets/images/contact/man3.jpg"
+                alt="Headshot Woman"
+              />
+              <div class="flex flex-col items-center gap-2">
+                <p class="text-gray-500">Dodoma, Tanzania</p>
+                <p class="text-xl font-bold">Favor Oguage</p>
+                <p>
+                  He can code with his eyes closed and dance the Macarena at the
+                  same time.
+                </p>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

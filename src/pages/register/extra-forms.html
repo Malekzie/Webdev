@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../../output.css" />
+  </head>
+  <body>
+    <main class="flex">
+      <div>
+        <div class="absolute">
+          <h1 class="m-10 text-2xl font-bold text-white hover:scale-110">
+            <a href="/src/pages/index.html">Wanderlust</a>
+          </h1>
+        </div>
+        <div>
+          <img
+            class="object-fill w-[50vw] h-[100vh]"
+            src="../../../assets/images/register1.jpg"
+            alt="Register"
+            loading="eager"
+          />
+        </div>
+      </div>
+
+      <section class="w-[100%] bg-gradient-to-tl from-[#242a21] to-[#7a5f38]">
+        <div
+          class="mx-auto flex w-full flex-col justify-center h-full space-y-6 sm:w-[350px]"
+        >
+          <div class="flex flex-col space-y-2 text-center">
+            <h1 class="text-2xl font-semibold tracking-tight text-white">
+              Create an account
+            </h1>
+            <p class="text-sm">We require more details</p>
+            <form action="" method="get" class="text-white">
+              <div>
+                <label for="">First Name</label>
+                <input
+                  type="text"
+                  class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg"
+                  placeholder="John"
+                />
+                <label for="">Last Name</label>
+                <input
+                  type="text"
+                  class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg"
+                  placeholder="Doe"
+                />
+              </div>
+            </form>
+            <button
+              class="w-full p-1 bg-white border border-black rounded-lg hover:opacity-85"
+              type="submit"
+            >
+              <a href="./register/extra-forms.html">Sign in with email</a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

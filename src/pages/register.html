@@ -9,36 +9,37 @@
   <body>
     <main class="flex">
 
-      <div class="border-r-white">
+      <div>
         <div class="absolute">
           <h1 class="m-10 text-2xl font-bold text-white hover:scale-110">
             <a href=".">Wanderlust</a>
         </h1>
         </div>
         <div>
-          <img class="object-fill w-[50vw] h-[100vh]" src="../../assets/images/register1.jpg" alt="Register" />
+          <img class="object-fill w-[50vw] h-[100vh]" src="../../assets/images/register1.jpg" alt="Register" loading="eager"/>
         </div>
       </div>
+      
+      <section class="w-[100%] bg-gradient-to-tl from-[#242a21] to-[#7a5f38]">
 
-      <div class="w-[100%]">
-        <div class="p-10 m-10 border">
-          <h1 class="text-2xl font-bold">Register</h1>
-          <div class="mt-10">
-            <form action="" method="get" class="flex flex-col max-w-sm gap-3">
-              <label for="username">Username</label>
-              <input type="text" class="border border-black">
-              <label for="username">Password</label>
-              <input type="password" class="border border-black">
-              <label for="username">Confirm Password</label>
-              <input type="password" class="border border-black">
-              <button class="p-2 mt-3 text-green-400 border border-b rounded-lg">Submit</button>
+    		<div class="mx-auto flex w-full flex-col justify-center h-full space-y-6 sm:w-[350px]">
+          <div class="flex flex-col space-y-2 text-center">
+            <h1 class="text-2xl font-semibold tracking-tight text-white">Create an account</h1>
+            <p class="text-sm">
+              Enter your email below to create your account
+            </p>
+            <form action="" method="get">
+              <input type="text" class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg" placeholder="acme@acme.net">
             </form>
+            <button class="w-full p-1 bg-white border border-black rounded-lg hover:opacity-85" type="submit"><a href="./register/extra-forms.html">Sign in with email</a></button>
           </div>
+          
+          
         </div>
-      </div>
+      </section>
 
 
-
+      
     </main>
 
 
