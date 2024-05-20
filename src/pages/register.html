@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
+
+    <script src="../pages/register/index.js"></script>
     <title>Register</title>
   </head>
   <body>
@@ -29,9 +31,14 @@
               Enter your email below to create your account
             </p>
             <form action="" method="get">
-              <input type="text" class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg" placeholder="acme@acme.net">
+              <input type="email" 
+              class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg" 
+              placeholder="acme@acme.net" 
+              required>
+              <button 
+              id="redirect"
+              class="w-full p-1 mt-2 bg-white border border-black rounded-lg hover:opacity-85" type="submit">Sign in with email</button>
             </form>
-            <button class="w-full p-1 bg-white border border-black rounded-lg hover:opacity-85" type="submit"><a href="./register/extra-forms.html">Sign in with email</a></button>
           </div>
           
           

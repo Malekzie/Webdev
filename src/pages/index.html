@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" style="color-scheme: dark;">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
@@ -7,7 +7,7 @@
 
   </head>
   <body>
-    <header class="flex justify-between items-center border-b-2 bg-[#5C443E]">
+    <header class="flex items-center justify-between border-b border-white">
 
       <div class="ml-3">
         <img
@@ -15,7 +15,7 @@
         src="../../assets/images/logo.png" alt="logo" />
       </div>
 
-      <p class="text-2xl font-bold text-[#DB4827]"><a href=".">Wanderlust</a></p>
+      <p class="text-2xl font-bold text-[#349FE7]"><a href=".">Wanderlust</a></p>
 
       <div class="flex gap-5 mr-5">
           <a class="hover:scale-110 text-[#DB4827] font-semibold transition-colors" href="./contact.html">Contacts</a>
@@ -25,14 +25,14 @@
     </header>
 
     <main>
-        <div class="bg-[#865145] p-5">
+        <div class="p-5 mb-5 bg-opacity-85">
 
                 <div class="mx-auto">
-                    <h1 class="text-4xl font-bold text-center mt-10 text-[#DB4827]">Wanderlust</h1>
-                    <p class="text-center mt-5 text-[#DCAB6B]">Travel the world with us</p>
+                    <h1 class="text-4xl font-bold text-center mt-10 text-[#8AF3EE]">Wanderlust</h1>
+                    <p class="text-center mt-5 text-[#349FE7]">Travel the world with us</p>
             </div>
             
-            <div class="flex max-w-xl m-10 ml-20">
+            <div class="flex max-w-xl m-10 mx-auto justify-evenly">
                 <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel1.jpg" alt="Morroco">
                 <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel2.jpg" alt="Saudi Arabia">
                 <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel3.jpg" alt="Syria">
@@ -44,9 +44,11 @@
             </div>
         </div>
 
-        <div>
+        <div class="grid grid-cols-4 mx-4 auto-rows-auto">
+          <div class="col-span-1 col-start-4">
             <h2 class="text-2xl font-bold text-center mt-10 text-[#DB4827]">About Us</h2>
             <p class="text-center mt-5 text-[#DCAB6B]">We are a travel agency that offers the best travel experience</p>
+          </div>
         </div>
 
     </main>

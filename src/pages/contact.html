@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" style="color-scheme: dark;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
     ></script>
   </head>
   <body>
-    <header class="flex justify-between items-center border-b-2 bg-[#5C443E]">
+    <header class="flex items-center justify-between border-b-2 ">
       <div class="ml-3">
         <img
           class="w-[5rem] h-auto"
@@ -44,61 +44,64 @@
     </header>
 
     <main class="h-[100%]">
-      <div class="flex flex-col items-center max-w-xl gap-3 p-3 m-auto mt-10">
-        <h1 class="text-4xl font-bold">Get in touch with our support team</h1>
-        <p class="text-sm text-gray-500">
-          Our business hours are 9AM-6PM MST Monday-Friday and 9AM-5PM MST on
-          weekends
-        </p>
-      </div>
-
-      <section class="flex mt-10 justify-evenly">
-        <div
-          class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
-        >
-          <div class="flex flex-col items-center gap-3">
-            <p class="text-xl font-bold">Chat with us</p>
-            <p class="text-sm">Our Support team is a click away!</p>
-          </div>
-          <a href="./contact/chat.html" class="font-semibold text-indigo-900"
-            >Chat Now
-            <ion-icon name="arrow-forward-outline" size="small"></ion-icon
-          ></a>
+      <section class="py-10 bg-slate-400 bg-opacity-55">
+        <div class="flex flex-col items-center max-w-xl gap-3 p-3 m-auto my-10">
+          <h1 class="text-4xl font-bold">Get in touch with our support team</h1>
+          <p class="font-sans text-sm">
+            Our business hours are 9AM-6PM MST Monday-Friday and 9AM-5PM MST on
+            weekends
+          </p>
         </div>
-
-        <div
-          class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
-        >
-          <div class="flex flex-col items-center gap-3">
-            <p class="text-xl font-bold">Email support</p>
-            <p class="text-sm">
-              Prefer to email? Send us an email and we'll get back to you soon.
-            </p>
+        <!-- Card Section -->
+        <section class="flex mt-10 justify-evenly">
+          <div
+            class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <p class="text-xl font-bold">Chat with us</p>
+              <p class="text-sm">Our Support team is a click away!</p>
+            </div>
+            <a href="./contact/chat.html" class="font-semibold text-indigo-900"
+              >Chat Now
+              <ion-icon name="arrow-forward-outline" size="small"></ion-icon
+            ></a>
           </div>
-          <a href="" class="font-semibold text-indigo-900"
-            >Send Email
-            <ion-icon name="arrow-forward-outline" size="small"></ion-icon
-          ></a>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
-        >
-          <div class="flex flex-col items-center gap-3">
-            <p class="text-xl font-bold">Help Center</p>
-            <p class="text-sm">
-              Our self-serve help center is open 24/7 with 150+ articles to help
-            </p>
+          <div
+            class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <p class="text-xl font-bold">Email support</p>
+              <p class="text-sm">
+                Prefer to email? Send us an email and we'll get back to you soon.
+              </p>
+            </div>
+            <a href="./contact/email.html" class="font-semibold text-indigo-900"
+              >Send Email
+              <ion-icon name="arrow-forward-outline" size="small"></ion-icon
+            ></a>
           </div>
-          <a href="" class="font-semibold text-indigo-900"
-            >Visit Help Center<ion-icon
-              name="arrow-forward-outline"
-              size="small"
-            ></ion-icon
-          ></a>
-        </div>
+          <div
+            class="flex flex-col items-center justify-center gap-3 border bg-[#DCAB6B] bg-opacity-30 max-w-[15rem] p-3 rounded-lg"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <p class="text-xl font-bold">Help Center</p>
+              <p class="text-sm">
+                Our self-serve help center is open 24/7 with 150+ articles to help
+              </p>
+            </div>
+            <a
+              href="./contact/help-centre.html"
+              class="font-semibold text-indigo-900"
+              >Visit Help Center<ion-icon
+                name="arrow-forward-outline"
+                size="small"
+              ></ion-icon
+            ></a>
+          </div>
+        </section>
       </section>
-
+      
+      <!-- Team Section -->
       <section class="my-10">
         <div class="flex flex-col items-center justify-center gap-2 mt-20">
           <p class="text-sm font-light">Our Support Team</p>
@@ -110,85 +113,83 @@
           </p>
         </div>
         <!-- Div for the team members -->
-          <div
-            class="grid grid-cols-3 gap-5 my-10 mx-28"
-          >
-            <div class="flex flex-col items-center justify-center max-w-sm">
-              <img
-                class="w-[5rem] h-[5rem] object-cover rounded-full"
-                src="../../assets/images/contact/woman1.jpg"
-                alt="Headshot Woman"
-              />
-              <div class="flex flex-col items-center gap-2">
-                <p class="text-gray-500">Ontario, Canada</p>
-                <p class="text-xl font-bold">Maria Cunnings</p>
-                <p>
-                  She can juggle flaming torches while solving customer issues.
-                </p>
-              </div>
+        <div class="flex flex-wrap max-w-[70%] justify-between gap-5 my-10 mx-auto">
+          <div class="flex flex-col items-center justify-center max-w-sm">
+            <img
+              class="w-[5rem] h-[5rem] object-cover rounded-full"
+              src="../../assets/images/contact/woman1.jpg"
+              alt="Headshot Woman"
+            />
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-gray-500">Ontario, Canada</p>
+              <p class="text-xl font-bold">Maria Cunnings</p>
+              <p>
+                She can juggle flaming torches while solving customer issues.
+              </p>
             </div>
-            <div class="flex flex-col items-center justify-center max-w-sm">
-              <img
-                class="w-[5rem] h-[5rem] object-cover rounded-full"
-                src="../../assets/images/contact/man1.jpg"
-                alt="Headshot Woman"
-              />
-              <div class="flex flex-col items-center gap-2">
-                <p class="text-gray-500">New York, US</p>
-                <p class="text-xl font-bold">Blake Edwards</p>
-                <p>He can solve a Rubik's cube in under 30 seconds.</p>
-              </div>
+          </div>
+          <div class="flex flex-col items-center justify-center max-w-sm">
+            <img
+              class="w-[5rem] h-[5rem] object-cover rounded-full"
+              src="../../assets/images/contact/man1.jpg"
+              alt="Headshot Woman"
+            />
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-gray-500">New York, US</p>
+              <p class="text-xl font-bold">Blake Edwards</p>
+              <p>He can solve a Rubik's cube in under 30 seconds.</p>
             </div>
-            <div class="flex flex-col items-center justify-center max-w-sm">
-              <img
-                class="w-[5rem] h-[5rem] object-cover rounded-full"
-                src="../../assets/images/contact/woman2.jpg"
-                alt="Headshot Woman"
-              />
-              <div class="flex flex-col items-center gap-2">
-                <p class="text-gray-500">Chihuahua, Mexico</p>
-                <p class="text-xl font-bold">Rosa De Leon</p>
-                <p>She can speak five different languages simultaneously.</p>
-              </div>
+          </div>
+          <div class="flex flex-col items-center justify-center max-w-sm">
+            <img
+              class="w-[5rem] h-[5rem] object-cover rounded-full"
+              src="../../assets/images/contact/woman2.jpg"
+              alt="Headshot Woman"
+            />
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-gray-500">Chihuahua, Mexico</p>
+              <p class="text-xl font-bold">Rosa De Leon</p>
+              <p>She can speak five different languages simultaneously.</p>
             </div>
-            <div class="flex flex-col items-center justify-center max-w-sm">
-              <img
-                class="w-[5rem] h-[5rem] object-cover rounded-full"
-                src="../../assets/images/contact/woman3.jpg"
-                alt="Headshot Woman"
-              />
-              <div class="flex flex-col items-center gap-2">
-                <p class="text-gray-500">Cairo, Egypt</p>
-                <p class="text-xl font-bold">Fatema Al Saed</p>
-                <p>She can solve a Rubik's cube with her feet.</p>
-              </div>
+          </div>
+          <div class="flex flex-col items-center justify-center max-w-sm">
+            <img
+              class="w-[5rem] h-[5rem] object-cover rounded-full"
+              src="../../assets/images/contact/woman3.jpg"
+              alt="Headshot Woman"
+            />
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-gray-500">Cairo, Egypt</p>
+              <p class="text-xl font-bold">Fatema Al Saed</p>
+              <p>She can solve a Rubik's cube with her feet.</p>
             </div>
-            <div class="flex flex-col items-center justify-center max-w-sm">
-              <img
-                class="w-[5rem] h-[5rem] object-cover rounded-full"
-                src="../../assets/images/contact/man2.jpg"
-                alt="Headshot Woman"
-              />
-              <div class="flex flex-col items-center gap-2">
-                <p class="text-gray-500">Cologne, Germany</p>
-                <p class="text-xl font-bold">Herman Gioff</p>
-                <p>He can code with his eyes closed.</p>
-              </div>
+          </div>
+          <div class="flex flex-col items-center justify-center max-w-sm">
+            <img
+              class="w-[5rem] h-[5rem] object-cover rounded-full"
+              src="../../assets/images/contact/man2.jpg"
+              alt="Headshot Woman"
+            />
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-gray-500">Cologne, Germany</p>
+              <p class="text-xl font-bold">Herman Gioff</p>
+              <p>He can code with his eyes closed.</p>
             </div>
-            <div class="flex flex-col items-center justify-center max-w-sm">
-              <img
-                class="w-[5rem] h-[5rem] object-cover rounded-full"
-                src="../../assets/images/contact/man3.jpg"
-                alt="Headshot Woman"
-              />
-              <div class="flex flex-col items-center gap-2">
-                <p class="text-gray-500">Dodoma, Tanzania</p>
-                <p class="text-xl font-bold">Favor Oguage</p>
-                <p>
-                  He can code with his eyes closed and dance the Macarena at the
-                  same time.
-                </p>
-              </div>
+          </div>
+          <div class="flex flex-col items-center justify-center max-w-sm">
+            <img
+              class="w-[5rem] h-[5rem] object-cover rounded-full"
+              src="../../assets/images/contact/man3.jpg"
+              alt="Headshot Woman"
+            />
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-gray-500">Dodoma, Tanzania</p>
+              <p class="text-xl font-bold">Favor Oguage</p>
+              <p>
+                He can code with his eyes closed and dance the Macarena at the
+                same time.
+              </p>
+            </div>
           </div>
         </div>
       </section>
