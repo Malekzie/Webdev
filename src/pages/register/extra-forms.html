@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="../../output.css" />
+    <script src="../../scripts/register/form-validate.js"></script>
   </head>
+  <!-- Scripts -->
+  <script>
+    // Prevents user from leaving the page when they have unsaved changes
+    window.onbeforeunload = function() {
+      return 'Are you sure you want to leave?'
+    }
+
+
+  </script>
+
+
   <body>
     <main class="flex">
       <div>
@@ -29,40 +41,74 @@
           class="mx-auto flex w-full flex-col justify-center h-full space-y-6 sm:w-[350px]"
         >
           <div class="flex flex-col space-y-2 text-center">
-            <h1 class="text-2xl font-semibold tracking-tight text-white">
+            <h1 class="text-3xl font-semibold tracking-tight text-white">
               Create an account
             </h1>
-            <p class="text-sm">We require more details</p>
+            <p class="text-sm text-slate-400">We require more details</p>
             <form action="" method="get" class="text-white">
-              <div>
-                <label for="">First Name</label>
+              <div class="grid grid-cols-2 gap-2">
                 <input
+                  id="firstName"
                   type="text"
-                  class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg"
-                  placeholder="John"
+                  class="w-full p-1 pl-2 my-3 text-white bg-transparent border border-black rounded-lg"
+                  placeholder="First Name"
+                  data-property="a"
+                  required
                 />
-                <label for="">Last Name</label>
                 <input
+                  id="lastName"
                   type="text"
-                  class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg"
-                  placeholder="Doe"
+                  class="w-full p-1 pl-2 my-3 text-white bg-transparent border border-black rounded-lg"
+                  placeholder="Last Name"
+                  required
                 />
-                <label for="">Address</label>
-                <input type="text" class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg" placeholder="1234 Main St" />
+                <input
+                  id="addressInput"
+                  type="text"
+                  class="w-full col-span-2 p-1 pl-2 my-3 text-white bg-transparent border border-black rounded-lg"
+                  placeholder="Address"
+                />
+                <input
+                  id="cityInput"
+                  type="text"
+                  class="w-full p-1 pl-2 my-3 text-white bg-transparent border border-black rounded-lg"
+                  placeholder="City"
+                  required
+                />
+                <input
+                  id="provinceInput"
+                  type="text"
+                  class="w-full p-1 pl-2 my-3 text-white bg-transparent border border-black rounded-lg"
+                  placeholder="Province"
+                  required
+                />
+                <input
+                  id="zipInput"
+                  type="text"
+                  class="w-full p-1 pl-2 my-3 text-white bg-transparent border border-black rounded-lg"
+                  placeholder="Zip Code"
+                  required
+                />
+                <input
+                  id="telInput"
+                  type="tel"
+                  class="w-full p-1 pl-2 my-3 text-white bg-transparent border border-black rounded-lg"
+                  placeholder="Phone Number"
+                  required
+                />
               </div>
-              <label for="">City</label>
-              <input type="text" class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg" placeholder="City" />
-              <label for="">Province</label>
-              <input type="text" class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg" placeholder="Province" />
-              <label for="">Postal Code</label>
-              <input type="text" class="w-full p-1 pl-2 bg-transparent border border-black rounded-lg" placeholder="A1A 1A1" />
+              <button
+              onsubmit="{(e) => {
+                e.preventDefault();
+                window.location.href = '/src/pages/register/extra-forms.html';
+              
+              }}"
+                class="w-full p-1 text-black bg-white border border-black rounded-lg hover:opacity-85"
+                type="submit"
+              >
+              Submit
+              </button>
             </form>
-            <button
-              class="w-full p-1 bg-white border border-black rounded-lg hover:opacity-85"
-              type="submit"
-            >
-              <a href="/src/pages/index.html">Submit</a>
-            </button>
           </div>
         </div>
       </section>

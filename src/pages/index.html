@@ -1,63 +1,102 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="color-scheme: dark;">
+<html lang="en" class="dark" style="color-scheme: dark">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
     <title>Wanderlust</title>
 
+    <script src="../scripts/index/images.js"></script>
   </head>
-  <body>
-    <header class="flex items-center justify-between border-b border-white">
 
+
+<body>
+  <img 
+  class="absolute object-fill w-full h-auto opacity-75 -z-10"
+  src="../../assets/images/index/background.jpg" 
+  alt="Background Image">
+  <!-- Navbar -->
+    <header class="flex items-center justify-between">
       <div class="ml-3">
         <img
-        class="w-[5rem] h-auto" 
-        src="../../assets/images/logo.png" alt="logo" />
+          class="w-[7rem] h-auto"
+          src="../../assets/images/index/logo.png"
+          alt="logo"
+        />
       </div>
 
-      <p class="text-2xl font-bold text-[#349FE7]"><a href=".">Wanderlust</a></p>
+      <p class="text-4xl font-bold text-[#349FE7]">
+        <a href=".">Wanderlust</a>
+      </p>
 
       <div class="flex gap-5 mr-5">
-          <a class="hover:scale-110 text-[#DB4827] font-semibold transition-colors" href="./contact.html">Contacts</a>
-          <a class="hover:scale-110 text-[#DB4827] font-semibold transition-colors" href="./register.html">Register</a>
+        <a
+          class="hover:scale-110 text-lg text-[#349FE7] font-semibold transition-colors"
+          href="./contact.html"
+          >Contacts</a
+        >
+        <a
+          class="hover:scale-110 text-lg text-[#349FE7] font-semibold transition-colors"
+          href="./register.html"
+          >Register</a
+        >
       </div>
-
     </header>
 
-    <main>
-        <div class="p-5 mb-5 bg-opacity-85">
+    <div class="mx-auto mt-10">
+      <h1 class="text-4xl font-bold text-center mt-10 text-[#8AF3EE]">
+        Travel the world with Wanderlust
+      </h1>
+      <p class="mt-5 font-semibold text-center">
+        Find your destination and we'll take care of the rest
+      </p>
 
-                <div class="mx-auto">
-                    <h1 class="text-4xl font-bold text-center mt-10 text-[#8AF3EE]">Wanderlust</h1>
-                    <p class="text-center mt-5 text-[#349FE7]">Travel the world with us</p>
-            </div>
-            
-            <div class="flex max-w-xl m-10 mx-auto justify-evenly">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel1.jpg" alt="Morroco">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel2.jpg" alt="Saudi Arabia">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel3.jpg" alt="Syria">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel4.jpg" alt="Jordan">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel5.jpg" alt="Yemen">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel7.jpg" alt="Egypt">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel8.jpg" alt="Lebanon">
-                <img class="h-auto w-[10rem] skew-y-12 hover:skew-y-0 hover:scale-110" src="../../assets/images/travel9.jpg" alt="Iraq">
-            </div>
-        </div>
+      <div class="flex justify-center gap-5 my-10">
+        <a href="" class="px-8 py-1 font-semibold transition-all rounded-full bg-rose-500 hover:bg-transparent">Explore</a>
+        <a href="" class="px-8 py-1 font-semibold transition-all bg-transparent rounded-full hover:bg-white hover:text-black ">Contact Us</a>
+      </div>
+    </div>
 
-        <div class="grid grid-cols-4 mx-4 auto-rows-auto">
-          <div class="col-span-1 col-start-4">
-            <h2 class="text-2xl font-bold text-center mt-10 text-[#DB4827]">About Us</h2>
-            <p class="text-center mt-5 text-[#DCAB6B]">We are a travel agency that offers the best travel experience</p>
+    
+    <main class="bg-gray-400 translate-y-60 rounded-t-[5rem]">
+      <div class="p-5 mb-5">
+        <section class="my-[20vh]">
+          <h1 class="text-4xl font-bold text-center my-5 text-[#349FE7]">
+            Popular Destinations
+          </h1>
+          <div id="carousel" class="flex justify-evenly">
           </div>
-        </div>
+        </section>
 
+
+      </div>
+
+      <!-- Carousel -->
+
+      <section class="max-w-[80%] mx-auto h-[50vh] mt-10">
+        <table class="w-full border border-white">
+          <tr class="border-b border-white">
+            <th>Location</th>
+            <th>Hours</th>
+            <th>Contact</th>
+          </tr>
+          <tr>
+            <td class="p-1 text-center">USA</td>
+            <td class="p-1 text-center">
+              9AM-6PM MST Monday-Friday and 9AM-5PM MST on weekends
+            </td>
+            <td class="p-1 text-center">1-800-123-4567</td>
+          </tr>
+        </table>
+      </section>
     </main>
 
-
     <footer class="flex justify-evenly">
-        <p>&copy; 2024 Wanderlust. All rights reserved.</p>
-        <p>Icons by <a href="https://icons8.com/" class="hover:text-purple-600">Icons8</a></p>
+      <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+      <p>
+        Icons by
+        <a href="https://icons8.com/" class="hover:text-purple-600">Icons8</a>
+      </p>
     </footer>
   </body>
 </html>
-
