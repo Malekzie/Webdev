@@ -41,8 +41,8 @@ const imageFile = [
       },
 ]
 
-const imgStyle = 'rounded-lg h-auto w-[12rem] hover:scale-110';
-const nameStyle = 'text-center text-white text-lg font-bold mb-3';
+const imgStyle = 'rounded-lg h-auto w-[10rem] max-h-[500px]';
+const nameStyle = 'text-center text-white text-lg font-bold my-8';
 
 
 async function carouselItems() {
@@ -62,33 +62,30 @@ async function carouselItems() {
             img.onerror = reject;
       })));
 
-      // Function to display a carousel item
-      function displayCarouselItem() {
-            if (carousel.children.length >= 3) {
-                  carousel.children[0].classList.add('translate-x-full', 'opacity-0');
-                  setTimeout(() => carousel.removeChild(carousel.children[0]), 1000);
-            }
+      // Display the carousel within the file with innerHTML and createElement.
+      // Do them accordingly and seperately to avoid confusion.
+      // Display the carousel item
+      // Set an interval to display the next carousel item every 3 seconds
 
+      function displayCarouselItem() {
+            carousel.innerHTML = ''; // Clear the carousel
             const carouselItem = document.createElement('div');
-            carouselItem.classList.add('carousel-item', 'transform', 'transition-transform', 'duration-300', 'transition-opacity', 'duration-300', 'w-48', 'h-auto', 'mr-4');
+            carouselItem.classList.add('carousel-item');
             carouselItem.innerHTML = `
-            <p class="${nameStyle}">${imageFile[currentIndex].name}</p>
               <img src="${imageFile[currentIndex].image}" alt="${imageFile[currentIndex].alt}" class="${imgStyle}">
+              <p class="${nameStyle}">${imageFile[currentIndex].name}</p>
             `;
             carousel.appendChild(carouselItem);
-      }
-      // Set an interval to display the next carousel item every 3 seconds
-      setInterval(function () {
+          }
+        
+          // Display the first carousel item
+          displayCarouselItem();
+        
+          // Set an interval to display the next carousel item every 3 seconds
+          setInterval(function() {
             currentIndex = (currentIndex + 1) % imageFile.length; // Cycle through the images
             displayCarouselItem();
-      }, 3000);
-
-      // Display the first three carousel items
-      for (let i = 0; i < 3; i++) {
-            displayCarouselItem();
-            currentIndex = (currentIndex + 1) % imageFile.length;
-      }
+          }, 3000);
 
 }
-
-window.onload = carouselItems;
+document.addEventListener('DOMContentLoaded', carouselItems);
