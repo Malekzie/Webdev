@@ -682,10 +682,6 @@ video {
   height: 50vh;
 }
 
-.h-\[5rem\] {
-  height: 5rem;
-}
-
 .h-\[90vh\] {
   height: 90vh;
 }
@@ -748,10 +744,6 @@ video {
 
 .max-w-\[80\%\] {
   max-width: 80%;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .max-w-xl {
@@ -956,11 +948,6 @@ video {
 
 .to-\[\#7a5f38\] {
   --tw-gradient-to: #7a5f38 var(--tw-gradient-to-position);
-}
-
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .object-fill {
