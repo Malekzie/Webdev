@@ -1,91 +1,60 @@
-const imageFile = [
-      {
-            image: '../../../assets/images/index/travel1.jpg',
-            alt: 'Morocco',
-            name: 'Morocco'
-      },
-      {
-            image: '../../../assets/images/index/travel2.jpg',
-            alt: 'Saudi Arabia',
-            name: 'Saudi Arabia'
-      },
-      {
-            image: '../../../assets/images/index/travel3.jpg',
-            alt: 'Syria',
-            name: 'Syria'
-      },
-      {
-            image: '../../../assets/images/index/travel4.jpg',
-            alt: 'Jordan',
-            name: 'Jordan'
-      },
-      {
-            image: '../../../assets/images/index/travel5.jpg',
-            alt: 'Yemen',
-            name: 'Yemen'
-      },
-      {
-            image: '../../../assets/images/index/travel6.jpg',
-            alt: 'Egypt',
-            name: 'Egypt'
-      },
-      {
-            image: '../../../assets/images/index/travel7.jpg',
-            alt: 'Lebanon',
-            name: 'Lebanon'
-      },
-      {
-            image: '../../../assets/images/index/travel8.jpg',
-            alt: 'Iraq',
-            name: 'Iraq'
-      },
-]
 
-const imgStyle = 'rounded-lg h-auto w-[10rem] max-h-[500px]';
-const nameStyle = 'text-center text-white text-lg font-bold my-8';
+// Logic
+const nextBtn = document.getElementById('next'),
+      prevBtn = document.querySelector('.prev'),
+      carousel = document.querySelector('.carousel'),
+      list = document.querySelector('.list'),
+      item = document.querySelectorAll('.item'),
+      runningTime = document.querySelector('.timeRunning');
 
 
-async function carouselItems() {
-      let currentIndex = 0;
-      const carousel = document.getElementById('carousel')
+let timeRunning = 3000;
+let timeAutoNext = 7000;
 
-      // Preload images
-      const images = imageFile.map(item => {
-            const img = new Image();
-            img.src = item.image;
-            return img;
-      });
-
-      // Wait for all images to load
-      await Promise.all(images.map(img => new Promise((resolve, reject) => {
-            img.onload = resolve;
-            img.onerror = reject;
-      })));
-
-      // Display the carousel within the file with innerHTML and createElement.
-      // Do them accordingly and seperately to avoid confusion.
-      // Display the carousel item
-      // Set an interval to display the next carousel item every 3 seconds
-
-      function displayCarouselItem() {
-            carousel.innerHTML = ''; // Clear the carousel
-            const carouselItem = document.createElement('div');
-            carouselItem.classList.add('carousel-item');
-            carouselItem.innerHTML = `
-              <img src="${imageFile[currentIndex].image}" alt="${imageFile[currentIndex].alt}" class="${imgStyle}">
-              <p class="${nameStyle}">${imageFile[currentIndex].name}</p>
-            `;
-            carousel.appendChild(carouselItem);
-          }
-        
-          // Display the first carousel item
-          displayCarouselItem();
-        
-          // Set an interval to display the next carousel item every 3 seconds
-          setInterval(function() {
-            currentIndex = (currentIndex + 1) % imageFile.length; // Cycle through the images
-            displayCarouselItem();
-          }, 3000);
-
+nextBtn.onclick = () => {
+      showSlider('next')
 }
-document.addEventListener('DOMContentLoaded', carouselItems);
+
+prevBtn.onclick = () => {
+      showSlider('prev')
+}
+
+let runTimeout
+let runNextAuto = setTimeout(() => {
+      nextBtn.click();
+}, timeAutoNext)
+
+function resetTimeAnimation() {
+      runningTime.style.animation = 'none';
+      runningTime.offsetHeight;
+      runningTime.style.animation = null;
+      runningTime.style.animation = 'run 7s linear 1 forwards';
+}
+
+function showSlider(type) {
+      let sliderItemsDom = document.querySelectorAll('.carousel .list .item');
+      if (type === 'next') {
+            list.appendChild(sliderItemsDom[0])
+            carousel.classList.add('next');
+      } else {
+            list.prepend(sliderItemsDom[sliderItemsDom.length - 1])
+            carousel.classList.add('prev');
+      }
+
+      // Clears timeout, allowing the carousel to run manually without interference
+      clearTimeout(runTimeout);
+      runTimeout = setTimeout(() => {
+            carousel.classList.remove('next');
+            carousel.classList.remove('prev');
+      }, timeRunning)
+
+      clearTimeout(runNextAuto);
+      runNextAuto = setTimeout(() => {
+            nextBtn.click();
+      }, timeAutoNext)
+
+      
+      resetTimeAnimation();
+}
+
+resetTimeAnimation();
