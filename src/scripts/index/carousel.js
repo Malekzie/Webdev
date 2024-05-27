@@ -53,6 +53,12 @@ const imagesFile = [
             name: 'Iran',
             description: 'Iran is a country located in the Middle East, it is known for its ancient ruins, stunning landscapes, and rich history. The country is home to the ancient city of Persepolis, which was once the capital of the Persian Empire. Iran is also known for its vibrant culture, delicious cuisine, and warm hospitality. From the bustling streets of Tehran to the serene beauty of Isfahan, Iran offers a unique and unforgettable experience for travelers.'
       },
+      {
+            src: '../../../assets/images/index/travel10.jpg',
+            alt: 'Turkey',
+            name: 'Turkey',
+            description: 'Turkey is a country located at the crossroads of Europe and Asia, it is known for its ancient ruins, stunning landscapes, and rich history. The country is home to the famous city of Istanbul, which straddles two continents and is a melting pot of cultures and religions. Turkey is also known for its delicious cuisine, vibrant markets, and warm hospitality, making it a popular destination for tourists.'
+      }
 
 ]
 
@@ -60,19 +66,91 @@ const imagesFile = [
 // Image Gallery
 const carouselStyle = 'relative h-[100vh] -mt-12 overflow-hidden';
 
-
-
-
-
 // Carousel
-// Logic
-const nextBtn = document.getElementById('next'),
-      prevBtn = document.querySelector('.prev'),
-      carousel = document.querySelector('.carousel'),
+const carousel = document.querySelector('.carousel'),
       list = document.querySelector('.list'),
       item = document.querySelectorAll('.item'),
+      content = document.querySelector('.content'),
+      contentName = document.querySelector('.name'),
+      contentDescription = document.querySelector('.des'),
+      nextBtn = document.getElementById('next'),
+      prevBtn = document.querySelector('.prev'),
       runningTime = document.querySelector('.timeRunning');
 
+// Appending Images to the DOM
+
+const carouselDiv = document.getElementById('carousel');
+
+// Order of the container
+
+// Carousel
+//  - List
+//    - Item
+//      - Content
+//        - Title
+//        - Name
+//        - Description
+//      - Button
+
+
+imagesFile.forEach(image => {
+      const listDiv =  document.querySelector('.list');
+            itemDiv = document.createElement('div');
+            contentDiv = document.createElement('div');
+            titleDiv = document.createElement('div');
+            nameDiv = document.createElement('div');
+            desDiv = document.createElement('div');
+            buttonDiv = document.createElement('div');
+            seeMoreButton = document.createElement('button');
+            exploreButton = document.createElement('button');
+      
+      // Tailwind Styles
+      const buttonDivStyle = 'flex justify-center gap-4';
+
+            buttonStyles = `padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; border: 2px solid #fff; font-weight: 600; color: #fff; transition: all 0.3s ease-in-out;`;
+            
+
+// Adds the image to the item div which is the container
+itemDiv.style.backgroundImage = `url(${image.src})`;
+itemDiv.classList.add('item');
+listDiv.appendChild(itemDiv);
+
+// Adds the content to the content div which is the container for the content
+contentDiv.classList.add('content');
+itemDiv.appendChild(contentDiv);
+
+
+nameDiv.textContent = image.name;
+nameDiv.classList.add('name');
+titleDiv.textContent = 'WanderLust';
+titleDiv.classList.add('title');
+desDiv.textContent = image.description;
+desDiv.classList.add('des');
+
+// Buttons
+seeMoreButton.textContent = 'See More';
+exploreButton.textContent = 'Explore';
+
+seeMoreButton.style.cssText = buttonStyles;
+exploreButton.style.cssText = buttonStyles;
+
+
+exploreButton.classList.add('exploreButton');
+
+buttonDiv.classList.add(...buttonDivStyle.split(' '));
+
+buttonDiv.appendChild(seeMoreButton);
+buttonDiv.appendChild(exploreButton);
+
+
+contentDiv.appendChild(titleDiv);
+contentDiv.appendChild(nameDiv);
+contentDiv.appendChild(desDiv);
+contentDiv.appendChild(buttonDiv);
+
+})
+
+// Logic
 
 let timeRunning = 3000;
 let timeAutoNext = 7000;

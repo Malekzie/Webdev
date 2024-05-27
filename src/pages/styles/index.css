@@ -60,6 +60,7 @@
      width: 400px;
      text-align: left;
      display: none;
+     
 }
 
 .list .item:nth-child(2) .content{
@@ -112,6 +113,14 @@
      border: 2px solid #fff;
 }
 
+.exploreButton:hover{
+     background-color: #14ff72cb;
+     border-color: #14ff72cb;
+     color: #fff;
+}
+
+
+/* 
 .content .btn button:nth-child(1){
      margin-right: 15px;
      background-color: #fff;
@@ -122,12 +131,7 @@
      color: #14ff72cb;
      transition: 0.3s;
 }
-
-.content .btn button:nth-child(2):hover{
-     background-color: #14ff72cb;
-     border-color: #14ff72cb;
-     color: #fff;
-}
+*/
 
 
 @keyframes animate {
