@@ -63,7 +63,7 @@ const containerStyle = 'flex flex-wrap max-w-sm justify-center gap-4 w-[10rem]';
      countryStyle = 'text-gray-500 text-sm';
      nameStyle = 'text-2xl font-semibold mt-2';
      phoneStyle = 'text-sm underline text-rose-500';
-     emailStyle = 'text-blue-500 text-sm';
+     emailStyle = 'text-blue-500 text-sm cursor-pointer';
 
 const agentDiv = document.getElementById('agents');
 
